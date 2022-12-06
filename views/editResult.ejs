@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <title>Edit Result</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-primary bg-gradient">
+            <div class="container-fluid justify-content-center">
+                <h1 class="text-white">Result Management System</h1>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid mt-5">
+        <div class="mb-4 ms-5">
+            <a href="/teacher">Go Back</a>
+        </div>
+        <form class="form ms-5" action="/update-result" method="post">
+            <div class="row align-items-start">
+                <div class="col-7">
+                    <div class="mb-3">
+                        <label class="col-2" for="rollNo">Roll No:</label>
+                        <input type="number" name="rollNo" id="rollNo" value="<%= result.rollNo %>">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-2" for="name">Name:</label>
+                        <input type="text" name="name" id="name" value="<%= result.name %>">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-2" for="dob">Date of Birth:</label>
+                        <input type="text" name="dob" id="dob" value="<%= result.dob %>">
+                        <span id="dobHelp" class="form-text ms-1">Date of Birth should be in the 'yyyy-mm-dd' only</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-2" for="marks">Score:</label>
+                        <input type="number" name="marks" id="marks" value="<%= result.marks %>">
+                    </div>
+                </div>
+            </div>
+                <input class="btn btn-success" type="submit" value="Add Result"/>
+        </form>
+    </div>
+</body>
+</html>
